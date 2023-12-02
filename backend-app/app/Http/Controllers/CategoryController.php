@@ -23,7 +23,7 @@ class CategoryController extends Controller
             'name' => 'required|string|unique:categories',
         ]);
 
-        $slug = str::slug($request->name);
+        $slug = Str::slug($request->name);
 
         $category = Category::create([
             'name' => $request->name,

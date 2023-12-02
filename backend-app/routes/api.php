@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\SubCategoryController;
+use App\Http\Controllers\TopicController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Request;
@@ -16,12 +18,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:passport')->get('/user', function (Request $request) {
+Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::post('/register', [UserController::class, 'register']);
-Route::post('/login', [UserController::class, 'login']);
+Route::post('/login', [UserController::class, 'login'])->name('login');
 Route::middleware('auth:api')->post('/logout', [UserController::class, 'logout']);
 
 Route::apiResource('categories', CategoryController::class);
+Route::apiResource('sub-categories', SubCategoryController::class);
+Route::apiResource('topics', TopicController::class);

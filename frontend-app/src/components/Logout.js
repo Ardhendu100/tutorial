@@ -1,9 +1,10 @@
 
 import { useNavigate } from 'react-router-dom';
-function Logout() {
+function Logout(props) {
     const navigate=useNavigate()
+    props.setToken(null);
     localStorage.removeItem('token')
-    navigate('/sign-in')
+    navigate('/login')
   
 }
 

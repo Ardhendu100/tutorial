@@ -22,19 +22,12 @@ function HomePage() {
 
   return (
     <>
-    <section className="bg-gray-50 dark:bg-gray-900">
+    <section className="w-screen h-screen flex items-center">
       <Navbar />
-      <div className="banner relative overflow-hidden">
-        <video className="w-full h-auto" autoPlay muted loop>
-          <source src="/image/gallery.mp4" type="video/mp4" />
-        </video>
-        <div className="overlay absolute top-0 left-0 w-full h-full flex items-center justify-center text-white">
-          <h1 className="text-2xl md:text-4xl font-bold text-center p-4">
-            {text}
-          </h1>
-        </div>
+      <div className="w-full h-full">
+        <img className="w-full h-full object-cover" src="/image/landingpage.png" alt="image description" />
       </div>
-      </section>
+    </section>
     </>
   );
 }

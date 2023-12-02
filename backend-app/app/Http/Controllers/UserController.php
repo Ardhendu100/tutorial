@@ -58,9 +58,9 @@ class UserController extends Controller
         $user = User::where('email', $request->email)->first();
 
         if (!$user) {
-            return response()->json(['message' => 'The provided email doesn\'t exist', 'status' => 401], 401);
+            return response()->json(['message' => 'The provided email doesn\'t exist','type' => 'email', 'status' => 401], 401);
         } else {
-            return response()->json(['message' => 'Password is incorrect', 'status' => 401], 401);
+            return response()->json(['message' => 'Password is incorrect', 'type' => 'password', 'status' => 401], 401);
         }
     }
 }

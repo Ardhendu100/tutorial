@@ -1,27 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-function Login() {
-    const navigate = useNavigate();
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+function Login(props) {
+  const [token, setToken] = useState(props.token);
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [emailError, setEmailError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
 
-    const handleLogin = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post('http://127.0.0.1:8000/api/login', {
-                email: email,
-                password: password
-            });
-            const { token, user } = response.data;
-            localStorage.setItem('token', token);
+  useEffect(() => {
+    // Check if the user is already logged in (you can use your own logic)
+    if (props.token) {
+      setToken(props.token);
+      navigate('/');
+    }
+  }, [props.token, navigate]);
 
-            navigate('/');
-        } catch (error) {
-            console.error(error.response.data.message);
-        }
-    };
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(process.env.REACT_APP_BACKEND_URL + '/api/login', {
+        email: email,
+        password: password
+      });
+  
+      const { token, user } = response.data;
+      localStorage.setItem('token', token);
+      
+      // Use the setToken function from props to update the token in the App component
+      props.setToken(token);
+  
+      // Redirect to the home page or perform any other necessary actions
+      navigate('/');
+    } catch (error) {
+      // Handle login error
+      console.log(error.response.data);
+      if (error.response.data.type === 'password') {
+        setPasswordError(error.response.data.message);
+        setEmailError('');
+      } else {
+        setEmailError(error.response.data.message);
+        setPasswordError('');
+      }
+    }
+  };
+  
 
     return (
         <section className="bg-gray-50 dark:bg-gray-900">
@@ -40,11 +65,13 @@ function Login() {
                                 <label for="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                                 <input type="email" name="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@gmail.com" required value={email}
                                     onChange={(e) => setEmail(e.target.value)} />
+                                {emailError && <div className="text-red-500 text-sm mt-2">{emailError}</div>}
                             </div>
                             <div>
                                 <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                                 <input type="password" name="password" id="password" placeholder="••••••••" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required value={password}
                                     onChange={(e) => setPassword(e.target.value)} />
+                                {passwordError && <div className="text-red-500 text-sm mt-2">{passwordError}</div>}
                             </div>
                             <div className="flex items-center justify-between">
                                 <div className="flex items-start">
