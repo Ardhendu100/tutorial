@@ -2,27 +2,27 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { PencilIcon, TrashIcon } from '@heroicons/react/20/solid';
 
-const Categories = () => {
+const SubCategories = () => {
   const [categories, setCategories] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [createNewCategoryName, setCreateNewCategoryName] = useState('');
   const [updateCategory, setUpdateCategory] = useState(null);
   const [updateCategoryName, setUpdateCategoryName] = useState('');
-  const apiUrl: string = import.meta.env.VITE_REACT_APP_CATEGORIES || '';
 
   useEffect(() => {
     // Fetch categories from API
     getCategories();
   }, []);
 
-  const getCategories = async () => {
-    try {
-      const response = await axios.get(apiUrl);
-      setCategories(response.data.response);
-    } catch (error) {
-      console.error('Error fetching categories:', error);
-    }
-  };
+  const getCategories = () => {
+    axios.get('http://127.0.0.1:8000/api/categories')
+      .then(response => {
+        setCategories(response.data.response);
+      })
+      .catch(error => {
+        console.error('Error fetching categories:', error);
+      });
+  }
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -35,65 +35,67 @@ const Categories = () => {
     setUpdateCategoryName('');
   };
 
-  const handleCreateCategory = async () => {
-    try {
-      if (createNewCategoryName.trim() === '') {
-        alert('Category name cannot be empty');
-        return;
-      }
-
-      const data = {
-        name: createNewCategoryName,
-      };
-
-      await axios.post(apiUrl, data);
-      console.log('Category created successfully');
-      await getCategories();
-    } catch (error) {
-      console.error('Error creating category:', error);
+  const handleCreateCategory = () => {
+    if (createNewCategoryName.trim() === '') {
+      alert('Category name cannot be empty');
+      return;
     }
+
+    const data = {
+      name: createNewCategoryName,
+    };
+    axios.post('http://127.0.0.1:8000/api/categories', data)
+      .then(response => {
+        console.log('Category created successfully:', response.data);
+        getCategories();
+      })
+      .catch(error => {
+        console.log('Error creating category:', error);
+      });
 
     closeModal();
   };
 
   const handleUpdateClick = (category) => {
     setUpdateCategory(category);
-    setUpdateCategoryName(category.name);
+    setUpdateCategoryName(category.name)
     setIsModalOpen(true);
   };
+  
 
-  const handleUpdateCategory = async () => {
-    try {
-      if (updateCategoryName.trim() === '') {
-        alert('Category name cannot be empty');
-        return;
-      }
-
-      const data = {
-        name: updateCategoryName,
-      };
-
-      await axios.put(`${apiUrl}/${updateCategory?.id}`, data);
-      console.log('Category updated successfully');
-      await getCategories();
-    } catch (error) {
-      console.error('Error updating category:', error);
+  const handleUpdateCategory = () => {
+    if (updateCategoryName.trim() === '') {
+      alert('Category name cannot be empty');
+      return;
     }
+
+    const data = {
+      name: updateCategoryName,
+    };
+    axios.put(`http://127.0.0.1:8000/api/categories/${updateCategory.id}`, data)
+      .then(response => {
+        console.log('Category updated successfully:', response.data);
+        getCategories();
+      })
+      .catch(error => {
+        console.log('Error updating category:', error);
+      });
 
     closeModal();
   };
 
-  const handleDeleteClick = async (categoryId: string | number) => {
+  const handleDeleteClick = (categoryId) => {
     const isConfirmed = window.confirm('Are you sure you want to delete?');
 
     if (isConfirmed) {
-      try {
-        await axios.delete(`${apiUrl}/${categoryId}`);
-        console.log('Category deleted successfully');
-        await getCategories();
-      } catch (error) {
-        console.error('Error deleting category:', error);
-      }
+      axios.delete(`http://127.0.0.1:8000/api/categories/${categoryId}`)
+        .then(response => {
+          console.log('Category deleted successfully:', response.data);
+          getCategories();
+        })
+        .catch(error => {
+          console.log('Error deleting category:', error);
+        });
     } else {
       console.log('Deletion canceled.');
     }
@@ -185,4 +187,4 @@ const Categories = () => {
   );
 };
 
-export default Categories;
+export default SubCategories;

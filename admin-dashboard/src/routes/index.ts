@@ -10,6 +10,7 @@ const Tables = lazy(() => import('../pages/Tables'));
 const Alerts = lazy(() => import('../pages/UiElements/Alerts'));
 const Buttons = lazy(() => import('../pages/UiElements/Buttons'));
 const Categories = lazy(() => import('../pages/Module/Category/Categories'));
+const SubCategories = lazy(() => import('../pages/Module/SubCategory/SubCategories'));
 
 
 const coreRoutes = [
@@ -65,6 +66,12 @@ const coreRoutes = [
     title: 'All Categories',
     component: Categories,
   },
+  {
+    path: '/sub-categories',
+    title: 'All Sub Categories',
+    component: SubCategories,
+  },
+  
 ];
 
 const routes = [...coreRoutes];

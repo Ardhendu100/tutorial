@@ -161,3 +161,15 @@ span.flatpickr-weekday,
 [x-cloak] {
   display: none !important;
 }
+
+/* Add this to your existing styles */
+.modal {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal-open {
+  opacity: 1;
+  transform: translateY(0);
+}
