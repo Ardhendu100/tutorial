@@ -111,14 +111,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="absolute bottom-1/4 flex flex-col font-inter gap-[29px] items-start justify-start left-[0] w-[34%]">
-        <Text
-          className="text-base text-gray-900_01 w-full"
-          size="txtInterRegular16"
-        >
-          Using highly personalised activities, videos and animations you
-          can energise your students and motivate them to achieve their
-          learning goals as they progress through a journey.
-        </Text>
+        
         <div className="flex flex-row font-pangeaafrikantrial gap-4 items-center justify-start w-[65%] md:w-full">
           <Button
             className="border border-gray-50_01 border-solid cursor-pointer flex items-center justify-center min-w-[129px] shadow-bs"
@@ -164,13 +157,15 @@ const Navbar = () => {
           </>
         </span>
         <span className="text-green-A700 font-pangeaafrikantrial text-left font-semibold">
-          expertise
+        Curiosity
         </span>
         <span className="text-gray-900_01 font-pangeaafrikantrial text-left font-semibold">
           <>
             , we&#39;ll make
             <br />
-            it unforgettable.
+            learning code 
+            <br />
+            unforgettable.
           </>
         </span>
       </Text>

@@ -6,14 +6,14 @@ import Navbar from "pages/Navbar";
 const HomePage = () => {
   return (
     <>
-      <div className="bg-white-A700 font-pangeaafrikantrial h-[8960px] mx-auto overflow-auto pt-[45px] relative w-full">
+      <div className="bg-white-A700 font-pangeaafrikantrial h-[8060px] mx-auto overflow-auto pt-[45px] relative w-full">
         <div className="absolute flex flex-col h-max inset-[0] items-center justify-center m-auto w-full">
           <div className="flex flex-col md:gap-10 gap-[145px] items-center justify-start w-full">
             <div
-              className="bg-cover bg-no-repeat flex flex-col h-[8200px] items-center justify-end max-w-[1683px] mx-auto p-[73px] md:px-5 w-full"
+              className="bg-cover bg-no-repeat flex flex-col h-[7000px] items-center justify-end max-w-[1683px] mx-auto p-[73px] md:px-5 w-full"
               style={{ backgroundImage: "url('images/img_group2.svg')" }}
             >
-              <div className="flex flex-col items-center justify-start mb-[221px] mt-[1017px] w-[98%] md:w-full">
+              <div className="flex flex-col items-center justify-start mb-[221px] mt-[1000px] w-[98%] md:w-full">
                 <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between w-full">
                   <div className="flex sm:flex-1 flex-col gap-5 items-start justify-start md:mt-0 mt-3.5 w-auto sm:w-full">
                     <Text
@@ -26,7 +26,7 @@ const HomePage = () => {
                       className="leading-[58.00px] max-w-[572px] md:max-w-full text-5xl sm:text-[38px] md:text-[44px] text-gray-900"
                       size="txtPangeaAfrikanTrialMedium48"
                     >
-                      eLearning providing the best opportunities to the students
+                      We provide the best opportunities to students
                       around the glob.
                     </Text>
                     <div className="flex flex-col font-inter gap-5 items-center justify-start w-full">
@@ -34,25 +34,13 @@ const HomePage = () => {
                         className="leading-[26.00px] text-base text-gray-900_01 w-full"
                         size="txtInterRegular16"
                       >
-                        Install our top-rated dropshipping app to your
-                        e-commerce site and get access to US Suppliers,
-                        AliExpress vendors, and the best dropshipping and custom
-                        products. Start selling the right products to the
-                        customer base that you know best. We connect you to
-                        inventory, so you can focus on creating a catalog of
-                        profitable products for your online store.
+                        Welcome to <b>GoLearnHub</b>, we take pride in our commitment to providing unparalleled opportunities to students around the globe. We believe that coding is not just a skill; it's a passport to innovation and empowerment.
                       </Text>
                       <Text
                         className="leading-[26.00px] text-base text-gray-900_01 w-full"
                         size="txtInterRegular16"
                       >
-                        Install our top-rated dropshipping app to your
-                        e-commerce site and get access to US Suppliers,
-                        AliExpress vendors, and the best dropshipping and custom
-                        products. Start selling the right products to the
-                        customer base that you know best. We connect you to
-                        inventory, so you can focus on creating a catalog of
-                        profitable products for your online store.
+                        Our mission is simple yet powerful: to offer a platform where both novice learners and seasoned developers can discover, learn, and innovate. From foundational concepts to advanced techniques, <b>GoLearnHub</b> is your partner in the exciting journey of mastering programming. Join us as we cultivate a community where code isn't just lines on a screen but a gateway to endless possibilities. Your coding success story begins here at <b>GoLearnHub</b>.
                       </Text>
                     </div>
                     <Button
@@ -87,73 +75,6 @@ const HomePage = () => {
                   </div>
 
 
-                </div>
-                <div className="flex md:flex-col flex-row md:gap-10 items-start justify-between mt-[154px] w-[97%] md:w-full">
-                  <div className="md:h-[474px] h-[511px] md:mt-0 mt-[5px] relative w-[41%] md:w-full">
-                    <div className="absolute bg-gray-100 h-[474px] inset-x-[0] mx-auto rounded-tl-[10px] rounded-tr-[10px] top-[0] w-[474px]"></div>
-                    <Img
-                      className="absolute bottom-[0] h-[471px] inset-x-[0] mx-auto object-cover rounded-[10px] w-[92%]"
-                      src="images/img_sectionimg.png"
-                      alt="sectionimg"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-5 items-start justify-start w-auto sm:w-full">
-                    <Text
-                      className="text-2xl md:text-[22px] text-green-A700 sm:text-xl w-auto"
-                      size="txtPangeaAfrikanTrialSemiBold24"
-                    >
-                      Features
-                    </Text>
-                    <Text
-                      className="leading-[58.00px] max-w-[572px] md:max-w-full text-5xl sm:text-[38px] md:text-[44px] text-gray-900"
-                      size="txtPangeaAfrikanTrialMedium48"
-                    >
-                      We are always working to provide you best of the features
-                      in all aspects.
-                    </Text>
-                    <div className="flex flex-col font-inter gap-5 items-center justify-start w-full">
-                      <Text
-                        className="leading-[26.00px] text-base text-gray-900_01 w-full"
-                        size="txtInterRegular16"
-                      >
-                        Install our top-rated dropshipping app to your
-                        e-commerce site and get access to US Suppliers,
-                        AliExpress vendors, and the best dropshipping and custom
-                        products. Start selling the right products to the
-                        customer base that you know best. We connect you to
-                        inventory, so you can focus on creating a catalog of
-                        profitable products for your online store.
-                      </Text>
-                      <Text
-                        className="leading-[26.00px] text-base text-gray-900_01 w-full"
-                        size="txtInterRegular16"
-                      >
-                        Install our top-rated dropshipping app to your
-                        e-commerce site and get access to US Suppliers,
-                        AliExpress vendors, and the best dropshipping and custom
-                        products. Start selling the right products to the
-                        customer base that you know best. We connect you to
-                        inventory, so you can focus on creating a catalog of
-                        profitable products for your online store.
-                      </Text>
-                    </div>
-                    <Button
-                      className="cursor-pointer flex items-center justify-center min-w-[149px]"
-                      rightIcon={
-                        <Img
-                          className="h-5 mt-px mb-0.5 ml-2.5"
-                          src="images/img_materialsymbolsarrowforwardrounded.svg"
-                          alt="material-symbols:arrow-forward-rounded"
-                        />
-                      }
-                      shape="round"
-                      variant="fill"
-                    >
-                      <div className="font-medium leading-[normal] text-base text-center">
-                        Learn More
-                      </div>
-                    </Button>
-                  </div>
                 </div>
                 <div className="h-[400px] md:h-[560px] mt-40 relative w-[97%] md:w-full">
                   <Img
@@ -233,139 +154,122 @@ const HomePage = () => {
                       className="leading-[58.00px] mt-[23px] text-5xl sm:text-[38px] md:text-[44px] text-center text-gray-900 w-[67%] sm:w-full"
                       size="txtPangeaAfrikanTrialMedium48"
                     >
-                      By Joining eLearning Platform, One Can Avail a Lot Of
-                      Benefits.
-                    </Text>
-                    <Text
-                      className="leading-[26.00px] mt-[30px] text-base text-center text-gray-900_01 w-1/2 sm:w-full"
-                      size="txtInterRegular16"
-                    >
-                      Install our top-rated dropshipping app to your e-commerce
-                      site and get access to US Suppliers, AliExpress vendors,
-                      and the best.
+                      By Joining <span className="text-green-A700">GoLearnHub</span> Platform, One Can Avail a Lot Of
+                      <span className="text-green-A700"> Benefits</span>.
                     </Text>
                     <div className="flex flex-col font-pangeaafrikantrial gap-10 items-center justify-start mt-10 w-full">
                       <div className="gap-4 md:gap-5 grid sm:grid-cols-1 md:grid-cols-2 grid-cols-3 justify-center min-h-[auto] w-full">
-                        <div className="bg-gray-50 flex flex-1 flex-col h-[236px] md:h-auto items-start justify-start p-5 rounded-[10px] w-full">
+                        <div className="bg-gray-50 flex flex-1 flex-col h-[280px] md:h-auto items-start justify-start p-5 rounded-[10px] w-full">
                           <div className="flex flex-col gap-5 items-start justify-start w-auto">
-                            <div className="flex flex-col font-pangeaafrikantrial h-[54px] items-center justify-start w-[54px]">
+                            <div className="flex flex-col font-pangeaafrikantrial items-center justify-start w-[54px]">
                               <div className="h-[54px] relative w-[54px]">
-                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px]"></div>
-                                <Text
-                                  className="absolute inset-x-[0] mx-auto sm:text-3xl md:text-[32px] text-[34px] text-green-A700 text-right top-[0] w-max"
-                                  size="txtPangeaAfrikanTrialMedium34"
-                                >
-                                  01
-                                </Text>
+                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px] flex items-center justify-center">
+                                  <Text
+                                    className="text-[34px] text-green-A700"
+                                    size="txtPangeaAfrikanTrialMedium34"
+                                  >
+                                    01
+                                  </Text>
+                                </div>
                               </div>
                             </div>
+
                             <Text
                               className="text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto"
                               size="txtPangeaAfrikanTrialMedium24"
                             >
-                              Standardization
+                              Interactive Learning
                             </Text>
                             <Text
                               className="leading-[26.00px] max-w-[336px] md:max-w-full text-base text-gray-900_01"
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                                When working in a global workplace, it’s often
-                                difficult to gauge learners’ training
-                                experiences, which are ...{" "}
+                              Say goodbye to boring lectures. Immerse yourself in interactive learning experiences, quizzes, and coding challenges that make mastering programming concepts engaging and enjoyable.
                               </span>
-                              <span className="text-green-A700 font-inter text-left font-medium">
-                                Read More
-                              </span>
+                              
                             </Text>
                           </div>
                         </div>
                         <div className="border border-gray-100 border-solid flex flex-1 flex-col h-[236px] md:h-auto items-start justify-start p-5 rounded-[10px] w-full">
                           <div className="flex flex-col gap-5 items-start justify-start w-auto">
-                            <div className="flex flex-col font-pangeaafrikantrial h-[54px] items-center justify-start w-[54px]">
+                            <div className="flex flex-col font-pangeaafrikantrial items-center justify-start w-[54px]">
                               <div className="h-[54px] relative w-[54px]">
-                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rotate-[180deg] rounded-[50%] w-[54px]"></div>
-                                <Text
-                                  className="absolute left-[6%] sm:text-3xl md:text-[32px] text-[34px] text-green-A700 text-right top-[0]"
-                                  size="txtPangeaAfrikanTrialMedium34"
-                                >
-                                  02
-                                </Text>
+                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px] flex items-center justify-center">
+                                  <Text
+                                    className="text-[34px] text-green-A700"
+                                    size="txtPangeaAfrikanTrialMedium34"
+                                  >
+                                    02
+                                  </Text>
+                                </div>
                               </div>
                             </div>
+
                             <Text
                               className="text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto"
                               size="txtPangeaAfrikanTrialMedium24"
                             >
-                              Reduced Costs
+                              Expert Instructors
                             </Text>
                             <Text
                               className="leading-[26.00px] max-w-[336px] md:max-w-full text-base text-gray-900_01"
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                                With eLearning, there’s no cost to reproduce
-                                materials and, thanks to mobile learning and{" "}
+                              Learn from industry experts passionate about programming. Our instructors bring real-world experience to the virtual classroom, providing invaluable insights and guidance
                               </span>
-                              <span className="text-gray-900_01 font-inter text-left font-normal">
-                                microlearning
-                              </span>
-                              <span className="text-gray-900_01 font-inter text-left font-normal">
-                                , learners can ...{" "}
-                              </span>
-                              <span className="text-green-A700 font-inter text-left font-medium">
-                                Read More
-                              </span>
+                              
                             </Text>
                           </div>
                         </div>
                         <div className="bg-gray-50 flex flex-1 flex-col h-[236px] md:h-auto items-start justify-start p-5 rounded-[10px] w-full">
                           <div className="flex flex-col gap-5 items-start justify-start w-auto">
-                            <div className="flex flex-col font-pangeaafrikantrial h-[54px] items-center justify-start w-[54px]">
+                            <div className="flex flex-col font-pangeaafrikantrial items-center justify-start w-[54px]">
                               <div className="h-[54px] relative w-[54px]">
-                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px]"></div>
-                                <Text
-                                  className="absolute left-[4%] sm:text-3xl md:text-[32px] text-[34px] text-green-A700 text-right top-[0]"
-                                  size="txtPangeaAfrikanTrialMedium34"
-                                >
-                                  03
-                                </Text>
+                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px] flex items-center justify-center">
+                                  <Text
+                                    className="text-[34px] text-green-A700"
+                                    size="txtPangeaAfrikanTrialMedium34"
+                                  >
+                                    03
+                                  </Text>
+                                </div>
                               </div>
                             </div>
+
                             <Text
                               className="text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto"
                               size="txtPangeaAfrikanTrialMedium24"
                             >
-                              More Customization
+                              Career Guidance
                             </Text>
                             <Text
                               className="leading-[26.00px] max-w-[336px] md:max-w-full text-base text-gray-900_01"
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                                ust like learners aren’t one-size-fits-all,
-                                learning is not a one-size-fits-all experience.
-                                By using different ...{" "}
+                              Receive personalized career guidance, job readiness resources, and industry insights to help you succeed in the competitive world of programming
                               </span>
-                              <span className="text-green-A700 font-inter text-left font-medium">
-                                Read More
-                              </span>
+                              
                             </Text>
                           </div>
                         </div>
                         <div className="border border-gray-100 border-solid flex flex-1 flex-col h-[236px] md:h-auto items-start justify-start p-5 rounded-[10px] w-full">
                           <div className="flex flex-col gap-5 items-start justify-start w-auto">
-                            <div className="flex flex-col font-pangeaafrikantrial h-[54px] items-center justify-start w-[54px]">
+                            <div className="flex flex-col font-pangeaafrikantrial items-center justify-start w-[54px]">
                               <div className="h-[54px] relative w-[54px]">
-                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rotate-[180deg] rounded-[50%] w-[54px]"></div>
-                                <Text
-                                  className="absolute left-[0] sm:text-3xl md:text-[32px] text-[34px] text-green-A700 text-right top-[0]"
-                                  size="txtPangeaAfrikanTrialMedium34"
-                                >
-                                  04
-                                </Text>
+                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px] flex items-center justify-center">
+                                  <Text
+                                    className="text-[34px] text-green-A700"
+                                    size="txtPangeaAfrikanTrialMedium34"
+                                  >
+                                    04
+                                  </Text>
+                                </div>
                               </div>
                             </div>
+
                             <Text
                               className="text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto"
                               size="txtPangeaAfrikanTrialMedium24"
@@ -377,121 +281,75 @@ const HomePage = () => {
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                                With eLearning, there’s no cost to reproduce
-                                materials and, thanks to mobile learning and{" "}
-                              </span>
-                              <span className="text-gray-900_01 font-inter text-left font-normal">
-                                microlearning
-                              </span>
-                              <span className="text-gray-900_01 font-inter text-left font-normal">
-                                , learners can ...{" "}
-                              </span>
-                              <span className="text-green-A700 font-inter text-left font-medium">
-                                Read More
+                              Unlock the world of coding without breaking the bank – our affordable pricing plans make quality programming education accessible to all.
                               </span>
                             </Text>
                           </div>
                         </div>
                         <div className="bg-gray-50 flex flex-1 flex-col h-[236px] md:h-auto items-start justify-start p-5 rounded-[10px] w-full">
                           <div className="flex flex-col gap-5 items-start justify-start w-auto">
-                            <div className="flex flex-col font-pangeaafrikantrial h-[54px] items-center justify-start w-[54px]">
+                            <div className="flex flex-col font-pangeaafrikantrial items-center justify-start w-[54px]">
                               <div className="h-[54px] relative w-[54px]">
-                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px]"></div>
-                                <Text
-                                  className="absolute left-[4%] sm:text-3xl md:text-[32px] text-[34px] text-green-A700 text-right top-[0]"
-                                  size="txtPangeaAfrikanTrialMedium34"
-                                >
-                                  05
-                                </Text>
+                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px] flex items-center justify-center">
+                                  <Text
+                                    className="text-[34px] text-green-A700"
+                                    size="txtPangeaAfrikanTrialMedium34"
+                                  >
+                                    05
+                                  </Text>
+                                </div>
                               </div>
                             </div>
+
                             <Text
                               className="text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto"
                               size="txtPangeaAfrikanTrialMedium24"
                             >
-                              Learner Satisfaction
+                              Active Community Support
                             </Text>
                             <Text
                               className="leading-[26.00px] max-w-[336px] md:max-w-full text-base text-gray-900_01"
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                                If you really want students to retain what they
-                                learn, you’ll need to aim for high satisfaction
-                                rates. Bad ...{" "}
-                              </span>
-                              <span className="text-green-A700 font-inter text-left font-medium">
-                                Read More
+                              Join a vibrant community of learners and mentors. Engage in discussions, seek help, and collaborate on projects. Our community fosters a supportive environment for continuous growth.
                               </span>
                             </Text>
                           </div>
                         </div>
                         <div className="border border-gray-100 border-solid flex flex-1 flex-col h-[236px] md:h-auto items-start justify-start p-5 rounded-[10px] w-full">
                           <div className="flex flex-col gap-5 items-start justify-start w-auto">
-                            <div className="flex flex-col font-pangeaafrikantrial h-[54px] items-center justify-start w-[54px]">
+                            <div className="flex flex-col font-pangeaafrikantrial items-center justify-start w-[54px]">
                               <div className="h-[54px] relative w-[54px]">
-                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rotate-[180deg] rounded-[50%] w-[54px]"></div>
-                                <Text
-                                  className="absolute left-[4%] sm:text-3xl md:text-[32px] text-[34px] text-green-A700 text-right top-[0]"
-                                  size="txtPangeaAfrikanTrialMedium34"
-                                >
-                                  06
-                                </Text>
+                                <div className="absolute bg-green-A700_63 bottom-[0] h-[54px] inset-x-[0] mx-auto rounded-[50%] w-[54px] flex items-center justify-center">
+                                  <Text
+                                    className="text-[34px] text-green-A700"
+                                    size="txtPangeaAfrikanTrialMedium34"
+                                  >
+                                    06
+                                  </Text>
+                                </div>
                               </div>
                             </div>
+
                             <Text
                               className="text-2xl md:text-[22px] text-gray-900 sm:text-xl w-auto"
                               size="txtPangeaAfrikanTrialMedium24"
                             >
-                              Multimedia Materials
+                              Regular Updates and New Content
                             </Text>
                             <Text
                               className="leading-[26.00px] max-w-[336px] md:max-w-full text-base text-gray-900_01"
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                                One of the main reasons why{" "}
-                              </span>
-                              <span className="text-gray-900_01 font-inter text-left font-normal">
-                                custom eLearning
-                              </span>
-                              <span className="text-gray-900_01 font-inter text-left font-normal">
-                                {" "}
-                                is effective is that it’s the perfect delivery
-                                method for ...{" "}
-                              </span>
-                              <span className="text-green-A700 font-inter text-left font-medium">
-                                Read More
+                              Stay ahead in the ever-evolving programming landscape. Benefit from regular updates and new content, ensuring that your skills are aligned with the latest industry trends and technologies.
                               </span>
                             </Text>
                           </div>
                         </div>
                       </div>
-                      <div className="flex sm:flex-col flex-row sm:gap-10 items-center justify-between w-full">
-                        <Text
-                          className="text-2xl md:text-[22px] text-gray-900 sm:text-xl"
-                          size="txtPangeaAfrikanTrialSemiBold24Gray900"
-                        >
-                          View All Features
-                        </Text>
-                        <Line className="bg-blue_gray-100 h-0.5 sm:mt-0 my-[27px] w-[63%]" />
-                        <Button
-                          className="cursor-pointer flex items-center justify-center min-w-[154px]"
-                          rightIcon={
-                            <Img
-                              className="h-5 mt-px mb-0.5 ml-2.5"
-                              src="images/img_materialsymbolsarrowforwardrounded.svg"
-                              alt="material-symbols:arrow-forward-rounded"
-                            />
-                          }
-                          shape="round"
-                          variant="fill"
-                        >
-                          <div className="font-medium leading-[normal] text-base text-center">
-                            All Features
-                          </div>
-                        </Button>
-                      </div>
+
                     </div>
                   </div>
                 </div>
