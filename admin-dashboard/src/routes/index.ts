@@ -67,7 +67,7 @@ const coreRoutes = [
     component: Categories,
   },
   {
-    path: '/sub-categories',
+    path: '/categories/:slug/sub-categories',
     title: 'All Sub Categories',
     component: SubCategories,
   },

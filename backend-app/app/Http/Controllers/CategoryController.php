@@ -49,10 +49,10 @@ class CategoryController extends Controller
     }
 
     // Display the specified resource.
-    public function show($id)
+    public function show($slug)
     {
         try {
-            $category = Category::findOrFail($id);
+            $category = Category::with('subCategories')->where('slug',$slug)->first();
 
             return response()->json([
                 'response' => $category,

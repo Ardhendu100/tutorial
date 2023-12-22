@@ -185,9 +185,9 @@ const HomePage = () => {
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                              Say goodbye to boring lectures. Immerse yourself in interactive learning experiences, quizzes, and coding challenges that make mastering programming concepts engaging and enjoyable.
+                                Say goodbye to boring lectures. Immerse yourself in interactive learning experiences, quizzes, and coding challenges that make mastering programming concepts engaging and enjoyable.
                               </span>
-                              
+
                             </Text>
                           </div>
                         </div>
@@ -217,9 +217,9 @@ const HomePage = () => {
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                              Learn from industry experts passionate about programming. Our instructors bring real-world experience to the virtual classroom, providing invaluable insights and guidance
+                                Learn from industry experts passionate about programming. Our instructors bring real-world experience to the virtual classroom, providing invaluable insights and guidance
                               </span>
-                              
+
                             </Text>
                           </div>
                         </div>
@@ -249,9 +249,9 @@ const HomePage = () => {
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                              Receive personalized career guidance, job readiness resources, and industry insights to help you succeed in the competitive world of programming
+                                Receive personalized career guidance, job readiness resources, and industry insights to help you succeed in the competitive world of programming
                               </span>
-                              
+
                             </Text>
                           </div>
                         </div>
@@ -281,7 +281,7 @@ const HomePage = () => {
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                              Unlock the world of coding without breaking the bank – our affordable pricing plans make quality programming education accessible to all.
+                                Unlock the world of coding without breaking the bank – our affordable pricing plans make quality programming education accessible to all.
                               </span>
                             </Text>
                           </div>
@@ -312,7 +312,7 @@ const HomePage = () => {
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                              Join a vibrant community of learners and mentors. Engage in discussions, seek help, and collaborate on projects. Our community fosters a supportive environment for continuous growth.
+                                Join a vibrant community of learners and mentors. Engage in discussions, seek help, and collaborate on projects. Our community fosters a supportive environment for continuous growth.
                               </span>
                             </Text>
                           </div>
@@ -343,7 +343,7 @@ const HomePage = () => {
                               size="txtInterRegular16"
                             >
                               <span className="text-gray-900_01 font-inter text-left font-normal">
-                              Stay ahead in the ever-evolving programming landscape. Benefit from regular updates and new content, ensuring that your skills are aligned with the latest industry trends and technologies.
+                                Stay ahead in the ever-evolving programming landscape. Benefit from regular updates and new content, ensuring that your skills are aligned with the latest industry trends and technologies.
                               </span>
                             </Text>
                           </div>

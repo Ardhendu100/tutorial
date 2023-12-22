@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { PencilIcon, TrashIcon } from '@heroicons/react/20/solid';
+import { EyeIcon, PencilIcon, TrashIcon } from '@heroicons/react/20/solid';
+import { useNavigate } from 'react-router-dom';
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -9,6 +10,8 @@ const Categories = () => {
   const [updateCategory, setUpdateCategory] = useState(null);
   const [updateCategoryName, setUpdateCategoryName] = useState('');
   const apiUrl: string = import.meta.env.VITE_REACT_APP_CATEGORIES || '';
+  const [subCategories, setSubCategories] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Fetch categories from API
@@ -99,6 +102,54 @@ const Categories = () => {
     }
   };
 
+  const handleViewClick = async (slug: string | number) => {
+    const newPath = `/categories/${slug}/sub-categories`;
+    navigate(newPath);
+  };
+
+
+  const columns: GridColDef[] = [
+    { field: 'name', headerName: 'Category name', width: 200 },
+    { field: 'slug', headerName: 'Slug', width: 150 },
+    {
+      field: 'actions',
+      headerName: 'Actions',
+      width: 200,
+      sortable: false,
+      renderCell: (params: GridValueGetterParams) => (
+        <div style={{ display: 'flex' }}>
+          <button
+            onClick={() => handleUpdateClick(params.row)}
+            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+            type="button"
+          >
+            Update
+          </button>
+          <button
+            onClick={() => handleDeleteClick(params.row.id)}
+            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary"
+            type="button"
+          >
+            Delete
+          </button>
+          <button
+            onClick={() => handleViewClick(params.row.slug)}
+            className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary"
+            type="button"
+          >
+            View
+          </button>
+        </div>
+      ),
+    },
+  ];
+
+  const rows = categories.map((category) => ({
+    id: category.id,
+    name: category.name,
+    slug: category.slug,
+  }));
+  
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <div className="flex justify-end mb-4">
@@ -169,16 +220,23 @@ const Categories = () => {
                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2 p-2 border bg-blue-800 border-blue-500 rounded" type="button">
                     <PencilIcon className="w-5 h-5" />
                   </button>
-                  <button onClick={() => handleDeleteClick(category.id)} className="font-medium text-red-600 dark:text-red-500 hover:underline p-2 border border-red-500 bg-blue-800 rounded" type="button">
+                  <button onClick={() => handleDeleteClick(category.id)} className="font-medium text-red-600 dark:text-red-500 hover:underline mr-2 p-2 border border-red-500 bg-blue-800 rounded" type="button">
                     <TrashIcon className="w-5 h-5" />
                   </button>
-
+                  <button
+                    onClick={() => handleViewClick(category.slug)} 
+                    className="font-medium text-green-600 dark:text-green-500 hover:underline p-2 border border-green-500 bg-blue-800 rounded"
+                    type="button"
+                  >
+                    <EyeIcon className="w-5 h-5" />
+                  </button>
                 </div>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      
 
     </div>
 
