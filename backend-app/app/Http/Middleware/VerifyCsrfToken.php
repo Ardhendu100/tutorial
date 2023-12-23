@@ -12,6 +12,11 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+        'pay',
+        'pay-return-url',
+        'pay-callback-url',
+        'pay-refund-callback',
+        'pay-refund',
+        'pay-refund-view'
     ];
 }

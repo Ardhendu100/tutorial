@@ -7,7 +7,7 @@
 <title>Phonepay Payment</title>
 </head>
 <body>
-<form action="{{ url('pay') }}" method="get">
+<form action="{{ url('pay-refund') }}" method="get">
 @csrf
 <section style="background-color: #eee;">
 <h3 class="text-center">PHONEPAY PAYMENT DEMO BY CODE 180 </h3>
@@ -31,8 +31,7 @@
                 <div class="rounded border border-primary border-2 d-flex w-100 p-3 align-items-center"
                   style="background-color: rgba(18, 101, 241, 0.07);">
                   <div class="d-flex align-items-center pe-3">
-                    <input class="form-check-input" type="radio" name="radioNoLabelX" id="radioNoLabel11"
-                      value="" aria-label="..." checked />
+                    <input class="form-input" type="text" name="refund_tnx_id" id="refund_tnx_id" value="" />
                   </div>
                   <div class="d-flex flex-column">
                     <p class="mb-1 small text-primary">Total amount due</p>
@@ -43,7 +42,7 @@
             </div>
             <div class="d-flex justify-content-between align-items-center pb-1">
               <a href="#!" class="text-muted">Go back</a>
-              <button type="submit" class="btn btn-danger btn-lg">Pay amount</button>
+              <button type="submit" class="btn btn-danger btn-lg">Refund</button>
             </div>
           </div>
         </div>
@@ -55,8 +54,15 @@
 <section style="background-color: #d5d4d4;">
 <div class="container py-5">
     <div class="row d-flex justify-content-center">
-    	<h3 class="text-center">CHECKOUT RESPONSE</h3>
+    	<h3 class="text-center">REFUND RESPONSE</h3>
       {{ $res_data }}
+    </div>
+</div>
+</section>
+<section style="background-color: #d5d4d4;">
+<div class="container py-5">
+    <div class="row d-flex justify-content-center">
+      <h3 class="text-center">PAYMENT STATUS RESPONSE</h3>
       <?php if (isset($res_data_status)) {echo $res_data_status;}?>
     </div>
 </div>
